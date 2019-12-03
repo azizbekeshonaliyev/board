@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Func</title>
+</head>
+<body>
+    <input type="date" id="date">
+    <h5 id="show"></h5>
+    <script>
+        const date = document.querySelector('#date');
+        const show = document.querySelector('#show');
+
+        date.addEventListener('change',(event) => {
+            let dt = new Date(this.value);
+            var date = new Date(), y = dt.getFullYear(), m = dt.getMonth();
+            var firstDay = new Date(y, m, 1);
+            var lastDay = new Date(y, m + 1, 0);
+            console.log("=============================");
+            console.log("Date: ", date.value);
+            console.log("firstDay: ",firstDay);
+            console.log("lastDay: ", lastDay);
+            console.log("=============================");
+            console.log("");
+        })
+    </script>
+</body>
+</html>
